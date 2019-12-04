@@ -1,29 +1,32 @@
-//react를 시작
+// 1.리엑트를 시작한다.
 import React from "react";
+import { TouchableOpacity, Text, StyleSheet } from "react-native";
 
-//필요한 컴포넌트를 react-native에서 가져옴
-import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
+// 2.필요한 컴포넌트를 리엑트 네이티브에서 가져온다.
 
-//component를 사용
-class commonBtn extends React.Component {
-  //App.js에서 호출할 때, props를 전달해줄 것을 예상하고 미리 받는 로직을 작성해줌
-  constructor(props) {
-    super(props);
-  }
+// 3.컴포넌트를 시작한다.(class)
+
+export class CommonBtn extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <TouchableOpacity>
-          <Text>{this.props.children}</Text>
-        </TouchableOpacity>
-      </View>
+      <TouchableOpacity style={styles.btn}>
+        <Text>{this.props.children}</Text>
+      </TouchableOpacity>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: { backgroundColor: "#193b68" }
+  btn: {
+    margin: 10,
+    width: 160,
+    height: 40,
+    borderRadius: 10,
+    backgroundColor: "#e66767",
+    justifyContent: "center",
+    alignItems: "center"
+  }
 });
 
-//외부에서 사용할 수 있도록 export
-export default commonBtn;
+// 4.외부에서 사용할 수 있도록 export한다.
+export default CommonBtn;
