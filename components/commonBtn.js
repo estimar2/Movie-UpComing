@@ -10,7 +10,7 @@ export class CommonBtn extends React.Component {
   render() {
     return (
       <TouchableOpacity style={styles.btn}>
-        <Text>{this.props.children}</Text>
+        <Text style={styles.txt}>{this.props.children}</Text>
       </TouchableOpacity>
     );
   }
@@ -24,8 +24,14 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: "#e66767",
     justifyContent: "center",
-    alignItems: "center"
-  }
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.32,
+    shadowRadius: 5.46,
+    elevation: 9
+  },
+  txt: { color: "#fff" }
 });
 
 // 4.외부에서 사용할 수 있도록 export한다.
