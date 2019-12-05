@@ -5,8 +5,8 @@ You want watching the movie when this app recommended things...
 
 ## To Do
 
-- [x] NowPlaying Movie
-- [x] UpComing Movie
+- [ ] NowPlaying Movie
+- [ ] UpComing Movie
 
 ## PROGRESS
 

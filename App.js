@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { CommonBtn } from "./components/CommonBtn";
 import { movies } from "./api/movies";
+import MovieContainer from "./components/MovieContainer";
 //{} : 어딘가 안에서 꺼내올때 사용
 
 class App extends React.Component {
