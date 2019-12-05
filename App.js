@@ -6,7 +6,7 @@ import { movies } from "./api/movies";
 
 class App extends React.Component {
   //state : 값이 변경되면 화면을 재시작
-  state = { viewNowPlaying: null };
+  state = { viewNowPlaying: null, loading: false };
 
   //render() 후 자동으로 실행되는 function
   // => consloe.log()를 통해 순서 확인
@@ -34,14 +34,15 @@ class App extends React.Component {
       // console.log(UpComing.length);
 
       this.setState({
-        viewNowPlaying: NowPlaying
+        viewNowPlaying: NowPlaying,
+        loading: true
       });
     }
   };
 
   render() {
     // console.log("render");
-    const { viewNowPlaying } = this.state;
+    const { viewNowPlaying, loading } = this.state;
     return (
       <View style={styles.container}>
         <View style={styles.btnArea}>
@@ -49,9 +50,14 @@ class App extends React.Component {
           <CommonBtn>UpComing</CommonBtn>
         </View>
 
-        {viewNowPlaying.map(movie => (
-          <Text>{movie.title}</Text>
-        ))}
+        {/* 로딩이 false이면 아무것도 하지마
+        로딩이 ture로 바뀌면 실행 */}
+        {/* loading이 true라면 ?앞에꺼 실행 :아니면 뒤에꺼 실행 */}
+        {loading ? (
+          viewNowPlaying.map(movie => <Text>{movie.title}</Text>)
+        ) : (
+          <Text>Loading....</Text>
+        )}
       </View>
     );
   }
