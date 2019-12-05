@@ -54,7 +54,7 @@ class App extends React.Component {
         로딩이 ture로 바뀌면 실행 */}
         {/* loading이 true라면 ?앞에꺼 실행 :아니면 뒤에꺼 실행 */}
         {loading ? (
-          viewNowPlaying.map(movie => <Text>{movie.title}</Text>)
+          viewNowPlaying.map(movie => <Text key={movie.id}>{movie.title}</Text>)
         ) : (
           <Text>Loading....</Text>
         )}
