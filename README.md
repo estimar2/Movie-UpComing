@@ -21,10 +21,10 @@ You want watching the movie when this app recommended things...
 
 - axios실행 후, 에러가 발생한 경우 => npm install을 실행 후 서버 재시작
 
-- 401 error : axios version 0.19.\*일떄 || API_KEY가 잘못되었을 경우
+- 401 error : axios version 0.19.일떄 || API_KEY가 잘못되었을 경우
 
 - map 사용시 unique key 관련 경고가 발생되면 => 최상단 컴포넌트에게 key값을 부여한다.
 
 ## USE API
 
-    - moviedb.org
+- moviedb.org

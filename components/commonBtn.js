@@ -5,11 +5,14 @@ import { TouchableOpacity, Text, StyleSheet } from "react-native";
 // 2.필요한 컴포넌트를 리엑트 네이티브에서 가져온다.
 
 // 3.컴포넌트를 시작한다.(class)
+class CommonBtn extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-export class CommonBtn extends React.Component {
   render() {
     return (
-      <TouchableOpacity style={styles.btn}>
+      <TouchableOpacity onPress={this.props.action} style={styles.btn}>
         <Text style={styles.txt}>{this.props.children}</Text>
       </TouchableOpacity>
     );
